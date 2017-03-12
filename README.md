@@ -1,4 +1,4 @@
-# Webscene Server (webscene-server)
+# Web Scene Server (webscene-server)
 Server side library for building web UIs for Kotlin based projects.
 
 

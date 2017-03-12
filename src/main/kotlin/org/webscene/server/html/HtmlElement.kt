@@ -1,9 +1,10 @@
 package org.webscene.server.html
 
 /**
- * Basic HTML element which doesn't contain any children.
+ * Basic HTML element which doesn't contain any children (HTML elements).
+ * @author Nick Apperley
  */
-open class HtmlElement : Tag {
+open class HtmlElement : HtmlTag {
     val classes = mutableListOf<String>()
     override val attributes = mutableMapOf<String, String>()
     override lateinit var tagName: String
