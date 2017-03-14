@@ -1,7 +1,7 @@
 package org.webscene.server.html
 
 /**
- * Base for a parent HTML tag that contains children (tags).
+ * Base for a parent HTML tag that contains [children].
  * @author Nick Apperley
  */
 interface ParentHtmlTag : HtmlTag {

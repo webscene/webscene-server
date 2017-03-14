@@ -1,7 +1,7 @@
 package org.webscene.server.html
 
 /**
- * A parent HTML element which can contain children (HTML elements).
+ * A parent HTML element which can contain [children].
  * @author Nick Apperley
  */
 open class ParentHtmlElement : ParentHtmlTag {
@@ -12,9 +12,10 @@ open class ParentHtmlElement : ParentHtmlTag {
     override val children = mutableListOf<HtmlTag>()
 
     /**
-     * Creates a new parent HTML element in ParentHtmlElement that can contain child HTML elements.
+     * Creates a new parent HTML element that is appended to [children] that can contain child HTML elements.
      * @param tagName Name of the tag.
      * @param init Initialisation block for setting up the HTML element.
+     * @return A new [parent HTML element][ParentHtmlElement]
      */
     fun parentHtmlElement(tagName: String, init: ParentHtmlElement.() -> Unit): ParentHtmlElement {
         val parentHtmlElement = ParentHtmlElement()
@@ -26,9 +27,10 @@ open class ParentHtmlElement : ParentHtmlTag {
     }
 
     /**
-     * Creates a new HTML element in ParentHtmlElement which doesn't have any child HTML elements.
+     * Creates a new HTML element that is appended to [children] which doesn't have any child HTML elements.
      * @param tagName Name of the tag.
      * @param init Initialisation block for setting up the HTML element.
+     * @return A new [HTML element][HtmlElement]
      */
     fun htmlElement(tagName: String, init: HtmlElement.() -> Unit): HtmlElement {
         val htmlElement = HtmlElement()

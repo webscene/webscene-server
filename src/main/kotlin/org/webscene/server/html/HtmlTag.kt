@@ -16,6 +16,7 @@ interface HtmlTag {
     /**
      * Creates a text representation of HTML.
      * @param indent Number of spaces to use for indenting HTML elements.
+     * @return A [String] representing HTML.
      */
     fun createText(indent: Int = 2): String
 }
