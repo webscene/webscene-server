@@ -5,11 +5,11 @@ import org.webscene.server.html.ParentHtmlElement
 import org.webscene.server.template.PageTemplate
 import org.webscene.server.template.SectionTemplate
 
-@Suppress("unused")
 /**
  * Provides general view functionality.
  * @author Nick Apperley
  */
+@Suppress("unused")
 object WebScene {
     /**
      * Creates a new parent HTML element that can contain child HTML elements.

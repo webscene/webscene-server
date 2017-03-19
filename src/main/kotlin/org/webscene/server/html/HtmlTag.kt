@@ -5,12 +5,21 @@ package org.webscene.server.html
  * @author Nick Apperley
  */
 interface HtmlTag {
+    /**
+     * Name of the tag.
+     */
     var tagName: String
+    /**
+     * Multiple key/value entries that may be included in the HTML tag.
+     */
     val attributes: MutableMap<String, String>
     /**
      * If true then there is only one tag for the element, two otherwise.
      */
     var isClosed: Boolean
+    /**
+     * Ordinary text (doesn't include HTML tags).
+     */
     var txtContent: String
 
     /**

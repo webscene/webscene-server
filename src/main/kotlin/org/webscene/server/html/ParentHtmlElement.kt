@@ -5,6 +5,9 @@ package org.webscene.server.html
  * @author Nick Apperley
  */
 open class ParentHtmlElement : ParentHtmlTag {
+    /**
+     * Contains class names.
+     */
     val classes = mutableListOf<String>()
     override lateinit var tagName: String
     override val attributes = mutableMapOf<String, String>()
@@ -74,6 +77,9 @@ open class ParentHtmlElement : ParentHtmlTag {
         append("</$tagName>")
     }
 
+    /**
+     * Changes the text to include in the parent HTML element.
+     */
     operator fun String.unaryPlus() {
         txtContent = this
     }
