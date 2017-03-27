@@ -8,8 +8,6 @@ interface ParentHtmlTag : HtmlTag {
     override var isClosed: Boolean
         get() = false
         set(value) {}
-    /**
-     * HTML tags to include in the parent HTML tag.
-     */
+    /** HTML tags to include in the parent HTML tag. */
     val children: MutableList<HtmlTag>
 }

@@ -7,8 +7,6 @@ import org.webscene.server.html.HtmlTag
  * @author Nick Apperley
  */
 interface HtmlTemplate {
-    /**
-     * The root HTML element to use for the template.
-     */
+    /** The root HTML element to use for the template. */
     var content: HtmlTag?
 }

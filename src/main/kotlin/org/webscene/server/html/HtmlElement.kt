@@ -5,9 +5,7 @@ package org.webscene.server.html
  * @author Nick Apperley
  */
 open class HtmlElement : HtmlTag {
-    /**
-     * Contains class names.
-     */
+    /** Contains class names. */
     val classes = mutableListOf<String>()
     override val attributes = mutableMapOf<String, String>()
     override lateinit var tagName: String
@@ -32,7 +30,7 @@ open class HtmlElement : HtmlTag {
     }
 
     /**
-     * Changes the text to include in the HTML element.
+     * Changes the [text][txtContent] to include in the HTML element.
      */
     operator fun String.unaryPlus() {
         txtContent = this

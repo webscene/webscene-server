@@ -5,9 +5,7 @@ package org.webscene.server.html
  * @author Nick Apperley
  */
 open class ParentHtmlElement : ParentHtmlTag {
-    /**
-     * Contains class names.
-     */
+    /** Contains class names. */
     val classes = mutableListOf<String>()
     override lateinit var tagName: String
     override val attributes = mutableMapOf<String, String>()
@@ -15,10 +13,11 @@ open class ParentHtmlElement : ParentHtmlTag {
     override val children = mutableListOf<HtmlTag>()
 
     /**
-     * Creates a new parent HTML element that is appended to [children] that can contain child HTML elements.
+     * Creates a new [parent HTML element][ParentHtmlElement] that is appended to [children] that can contain child
+     * HTML elements.
      * @param tagName Name of the tag.
      * @param init Initialisation block for setting up the HTML element.
-     * @return A new [parent HTML element][ParentHtmlElement]
+     * @return A new [ParentHtmlElement]
      */
     fun parentHtmlElement(tagName: String, init: ParentHtmlElement.() -> Unit): ParentHtmlElement {
         val parentHtmlElement = ParentHtmlElement()
@@ -30,10 +29,11 @@ open class ParentHtmlElement : ParentHtmlTag {
     }
 
     /**
-     * Creates a new HTML element that is appended to [children] which doesn't have any child HTML elements.
+     * Creates a new [HTML element][HtmlElement] that is appended to [children] which doesn't have any child HTML
+     * elements.
      * @param tagName Name of the tag.
      * @param init Initialisation block for setting up the HTML element.
-     * @return A new [HTML element][HtmlElement]
+     * @return A new [HtmlElement]
      */
     fun htmlElement(tagName: String, init: HtmlElement.() -> Unit): HtmlElement {
         val htmlElement = HtmlElement()
@@ -78,7 +78,7 @@ open class ParentHtmlElement : ParentHtmlTag {
     }
 
     /**
-     * Changes the text to include in the parent HTML element.
+     * Changes the [text][txtContent] to include in the parent HTML element.
      */
     operator fun String.unaryPlus() {
         txtContent = this

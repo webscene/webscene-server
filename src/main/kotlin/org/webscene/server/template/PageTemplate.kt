@@ -11,17 +11,11 @@ import org.webscene.server.html.HtmlTag
  * @author Nick Apperley
  */
 class PageTemplate(val pageId: String, var title: String = "", var charset: String = "UTF-8") : HtmlTemplate {
-    /**
-     * HTML tags that are included in the **head** tag.
-     */
+    /** HTML tags that are included in the **head** tag. */
     val headItems = mutableListOf<HtmlTag>()
-    /**
-     * JavaScript tags (**script** tags) to include in the HTML.
-     */
+    /** JavaScript tags (**script** tags) to include in the HTML. */
     val scripts = mutableListOf<HtmlTag>()
-    /**
-     * HTML tags that are included in the **body** tag.
-     */
+    /** HTML tags that are included in the **body** tag. */
     val bodyItems = mutableListOf<HtmlTag>()
 
     override var content: HtmlTag? = null
