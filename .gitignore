@@ -1,7 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Gradle template
 .gradle
-/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -27,9 +26,6 @@ gradle-app.setting
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
-
-# Gradle:
-.idea/**/libraries
 
 # Mongo Explorer plugin:
 .idea/**/mongoSettings.xml
@@ -78,8 +74,10 @@ fabric.properties
 hs_err_pid*
 
 # Additional files/directories to ignore
-/.idea
+/.idea/
+/build/
 
 # Additional files/directories to unignore.
 !/gradle/wrapper/gradle-wrapper.jar
 !build.gradle.kts
+!settings.gradle
