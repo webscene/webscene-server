@@ -5,8 +5,8 @@ package org.webscene.server.html
  * @author Nick Apperley
  */
 open class ParentHtmlElement : ParentHtmlTag {
-    /** Contains class names. */
-    val classes = mutableListOf<String>()
+    /** Contains unique class names. */
+    val classes = mutableSetOf<String>()
     override lateinit var tagName: String
     override val attributes = mutableMapOf<String, String>()
     override var txtContent = ""

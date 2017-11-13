@@ -2,7 +2,8 @@ import org.gradle.jvm.tasks.Jar
 import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val KOTLIN_VER = "1.1.1"
+@Suppress("PropertyName")
+val KOTLIN_VER = "1.1.51"
 
 
 group = "org.webscene"
@@ -10,11 +11,11 @@ version = "0.1-SNAPSHOT"
 
 plugins {
     `maven-publish`
-    kotlin(module = "jvm", version = "1.1.1")
+    kotlin(module = "jvm", version = "1.1.51")
 }
 
 buildscript {
-    extra["dokka-ver"] = "0.9.13"
+    extra["dokka-ver"] = "0.9.14"
 
     repositories {
         jcenter()
@@ -26,6 +27,7 @@ buildscript {
     }
 }
 
+@Suppress("PropertyName")
 val DOKKA_VER = "${extra["dokka-ver"]}"
 
 apply {

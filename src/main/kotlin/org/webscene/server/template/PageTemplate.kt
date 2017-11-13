@@ -1,7 +1,7 @@
 package org.webscene.server.template
 
-import org.webscene.server.WebScene as ws
 import org.webscene.server.html.HtmlTag
+import org.webscene.server.html.HtmlCreator as html
 
 /**
  * Template for a web page.
@@ -19,7 +19,7 @@ class PageTemplate(val pageId: String, var title: String = "", var charset: Stri
     val bodyItems = mutableListOf<HtmlTag>()
 
     override var content: HtmlTag? = null
-        get() = ws.parentHtmlElement("html") {
+        get() = html.parentHtmlElement("html") {
             parentHtmlElement("head") {
                 if (title.isNotEmpty()) htmlElement("title") { +title }
                 headItems.forEach { children.add(it) }
@@ -32,13 +32,13 @@ class PageTemplate(val pageId: String, var title: String = "", var charset: Stri
 
     init {
         headItems.add(
-                ws.htmlElement("meta") {
+            html.htmlElement("meta") {
                     attributes["charset"] = charset
                     isClosed = true
                 }
         )
         headItems.add(
-                ws.htmlElement("meta") {
+            html.htmlElement("meta") {
                     attributes["pageId"] = pageId
                     isClosed = true
                 }

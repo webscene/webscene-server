@@ -5,8 +5,8 @@ package org.webscene.server.html
  * @author Nick Apperley
  */
 open class HtmlElement : HtmlTag {
-    /** Contains class names. */
-    val classes = mutableListOf<String>()
+    /** Contains unique class names. */
+    val classes = mutableSetOf<String>()
     override val attributes = mutableMapOf<String, String>()
     override lateinit var tagName: String
     override var isClosed = false

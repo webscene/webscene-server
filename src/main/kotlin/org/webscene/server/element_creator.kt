@@ -7,7 +7,7 @@ import org.webscene.server.html.bootstrap.ColumnSize
 import org.webscene.server.html.bootstrap.Container
 import org.webscene.server.html.bootstrap.Row
 
-// Creates Bootstrap and HTML elements.
+// Creates Bootstrap and HTML elements as text.
 // Author - Nick Apperley
 
 internal fun createBootstrapContainer(init: Container.() -> Unit): Container {
